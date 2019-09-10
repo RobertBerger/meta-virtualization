@@ -95,6 +95,18 @@ do_compile() {
 	VERSION="${DOCKER_VERSION}" DOCKER_GITCOMMIT="${SRCREV_docker}" make dynbinary
 }
 
+# use /data/docker as a data dir for docker, since data is a btrfs partition:
+# --data-root="/data/docker"
+# While it's possible to configure docker and kubelet to use cgroupfs this means
+# that there will then be two different cgroup managers, so we use systemd only:
+# --exec-opt native.cgroupdriver=systemd
+do_install_append() {
+        if ${@bb.utils.contains('DISTRO_FEATURES','systemd','true','false',d)}; then
+            #sed -i 's/ExecStart=\/usr\/bin\/dockerd -H fd:\/\//ExecStart=\/usr\/bin\/dockerd -H fd:\/\/ --data-root="\/data\/docker" --exec-opt native.cgroupdriver=systemd/' ${D}/${systemd_unitdir}/system/docker.service
+            sed -i 's/ExecStart=\/usr\/bin\/dockerd -H fd:\/\//ExecStart=\/usr\/bin\/dockerd -H fd:\/\/ --data-root="\/data\/docker"/' ${D}/${systemd_unitdir}/system/docker.service
+        fi
+}
+
 do_install() {
 	mkdir -p ${D}/${bindir}
 	cp ${S}/src/import/components/cli/build/docker ${D}/${bindir}/docker
