@@ -88,6 +88,9 @@ stg commit --all
 
 git log
 
+git co master
+
 9) push to my upstream
 
+my-scripts/push-all-to-github.sh
 
