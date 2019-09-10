@@ -3,7 +3,9 @@ HOMEPAGE = "https://www.docker.com/"
 LICENSE = "Apache-2.0"
 LIC_FILES_CHKSUM = "file://LICENSE;md5=435b266b3899aa8a959f17d41c56def8"
 
-SRC_URI += "file://0001-Allow-newer-versions-of-requests.patch"
+SRC_URI += "file://0001-Allow-newer-versions-of-requests.patch \
+            file://0002-remove-docker-version-dependency.patch \
+           "
 
 inherit pypi setuptools3
 

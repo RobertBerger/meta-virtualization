@@ -1,0 +1,25 @@
+From 317fec6cbaa481428b69575639f3c7d6d0cf8325 Mon Sep 17 00:00:00 2001
+From: genius user <genius@ReliableEmbeddedSystems.com>
+Date: Tue, 16 Jul 2019 15:52:53 +0000
+Subject: [PATCH] remove docker version dependency
+
+Signed-off-by: genius user <genius@ReliableEmbeddedSystems.com>
+---
+ setup.py | 1 -
+ 1 file changed, 1 deletion(-)
+
+diff --git a/setup.py b/setup.py
+index f444757..dacbdb7 100644
+--- a/setup.py
++++ b/setup.py
+@@ -36,7 +36,6 @@ install_requires = [
+     'requests >= 2.6.1, != 2.11.0',
+     'texttable >= 0.9.0, < 0.10',
+     'websocket-client >= 0.32.0, < 1.0',
+-    'docker >= 2.5.1, < 3.0',
+     'dockerpty >= 0.4.1, < 0.5',
+     'six >= 1.3.0, < 2',
+     'jsonschema >= 2.5.1, < 3',
+-- 
+2.7.4
+
