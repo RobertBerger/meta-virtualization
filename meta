@@ -1,6 +1,7 @@
 Version: 1
-Previous: None
-Head: 10ef706f61c4219712ff6b118446fee3ef359c1a
+Previous: 904da48a272ca60cae4c125967346e38d3ca9ae2
+Head: 661946e4e21d1393b803ae302e7968ec151c2a9f
 Applied:
+  0001-use-systemd-as-cgroup-manager-for-docker-While-it-s-.patch: 661946e4e21d1393b803ae302e7968ec151c2a9f
 Unapplied:
 Hidden:
