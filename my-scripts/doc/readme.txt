@@ -66,3 +66,6 @@ git co master
 cd my-scripts
 ./push-all-to-github.sh
 
+8) apply patches
+
+
