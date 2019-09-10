@@ -68,4 +68,24 @@ cd my-scripts
 
 8) apply patches
 
+cd meta-virtualization
+
+2019-09-09-warrior-2.7+ 
+
+stg init
+
+stg series
+
+stg import --mail ../meta-virtualization-patches/2019-09-09-warrior-2.7+/0001-use-systemd-as-cgroup-manager-for-docker-While-it-s-.patch
+
+import all patches
+
+...
+
+stg series 
+
+stg commit --all
+
+git log
+
 
