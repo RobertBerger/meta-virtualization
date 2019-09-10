@@ -70,7 +70,7 @@ cd my-scripts
 
 cd meta-virtualization
 
-2019-09-09-warrior-2.7+ 
+git co 2019-09-09-warrior-2.7+ 
 
 stg init
 
@@ -87,5 +87,7 @@ stg series
 stg commit --all
 
 git log
+
+9) push to my upstream
 
 
