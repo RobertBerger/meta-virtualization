@@ -41,10 +41,10 @@ git fetch git://git.yoctoproject.org/meta-virtualization warrior:refs/remotes/or
 git co master
 >> git remote -v
 
-official-upstream       git://git.yoctoproject.org/poky (fetch)
-official-upstream       git://git.yoctoproject.org/poky (push)
-origin  git@github.com:RobertBerger/poky.git (fetch)
-origin  git@github.com:RobertBerger/poky.git (push)
+official-upstream       git://git.yoctoproject.org/meta-virtualization (fetch)
+official-upstream       git://git.yoctoproject.org/meta-virtualization (push)
+origin  git@github.com:RobertBerger/meta-virtualization.git (fetch)
+origin  git@github.com:RobertBerger/meta-virtualization.git (push)
 
 >> git fetch official-upstream
 remote: Counting objects: 4043, done.
