@@ -61,7 +61,7 @@ From git://git.yoctoproject.org/meta-virtualization
 7) My own branch:
 git co master
 git co official-upstream/warrior
-git checkout -b 2019-09-10-warrior-2.7+
+git checkout -b 2019-09-09-warrior-2.7+
 git co master
 cd my-scripts
 ./push-all-to-github.sh
