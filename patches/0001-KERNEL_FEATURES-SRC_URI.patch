@@ -1,0 +1,26 @@
+Bottom: 877926f7dfd52c0e165e735a6c3b59ab8161b979
+Top:    5a9fd28a341e445e70d5476eb6bfba901085b72b
+Author: robert.berger <robert.berger@ReliableEmbeddedSystems.com>
+Date:   2020-06-02 16:55:11 +0300
+
+KERNEL_FEATURES -> SRC_URI
+
+Signed-off-by: robert.berger <robert.berger@ReliableEmbeddedSystems.com>
+
+
+---
+
+diff --git a/recipes-kernel/linux/linux-yocto_virtualization.inc b/recipes-kernel/linux/linux-yocto_virtualization.inc
+index f050b3f..2dc170d 100644
+--- a/recipes-kernel/linux/linux-yocto_virtualization.inc
++++ b/recipes-kernel/linux/linux-yocto_virtualization.inc
+@@ -14,7 +14,8 @@ KERNEL_MODULE_AUTOLOAD += "${@bb.utils.contains('DISTRO_FEATURES', 'kvm', 'kvm',
+ # aufs kernel support required for xen-image-minimal
+ KERNEL_FEATURES_append += "${@bb.utils.contains('DISTRO_FEATURES', 'aufs', ' features/aufs/aufs-enable.scc', '', d)}"
+ 
+-KERNEL_FEATURES_append = " cfg/virtio.scc"
++#KERNEL_FEATURES_append = " cfg/virtio.scc"
++SRC_URI += "file://features/virtio/virtio.scc"
+ 
+ # xen kernel support
+ SRC_URI += "${@bb.utils.contains('DISTRO_FEATURES', 'xen', ' file://xen.scc', '', d)}"
