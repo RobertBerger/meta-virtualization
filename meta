@@ -1,6 +1,7 @@
 Version: 1
-Previous: 07709dea451697fc5140040be958614a79969efd
-Head: f87eb93151e22cb80bcf56389bb439789f9191f2
+Previous: abc94149de24427596e0f3754a3c2196a8529245
+Head: df54d2193bd75d74bc5515d025892ceccaf15e46
 Applied:
+  0002-sloci-image-fix-variant-quoting.patch: df54d2193bd75d74bc5515d025892ceccaf15e46
 Unapplied:
 Hidden:
