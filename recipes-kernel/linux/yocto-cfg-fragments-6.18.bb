@@ -17,7 +17,7 @@ PV = "v${LINUX_VERSION}+git${SRCREV}"
 
 SRCREV = "6d012fbc35201ba081efcc19c9519c1dc7b64c43"
 SRC_URI = "\
-        git://git.yoctoproject.org/yocto-kernel-cache;branch=yocto-${LINUX_VERSION} \
+        git://git.yoctoproject.org/yocto-kernel-cache;branch=yocto-${LINUX_VERSION};protocol=https \
         "
 
 do_install() {
